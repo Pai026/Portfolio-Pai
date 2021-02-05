@@ -10,36 +10,38 @@
 {
   margin:0;
   padding: 0;
+  
 }
 body{
   font-family: 'Raleway';
 }
-.App
+/* .App
 {
   display: flex;
   width: 100vw;
   min-height: 100vh;
-}
-nav
+} */
+/* nav
 {
   padding:60px 30px 0px 30px ;
   flex:var(--sidebar-flex);
   background: rgb(238,103,143);
   background: linear-gradient(180deg, rgba(238,103,143,1) 50%, rgba(132,124,252,1) 80%);
-}
-.condiv
+} */
+ .condiv
 {
   padding: 100px ;
-  background-color: #f4f5f9;
-  flex:var(--condiv-flex);
-}
+  
+  
+} 
 
 .home
-{
+ {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   flex-direction: column;
   align-items: center;
+  
   
 }
 .profilepic
@@ -51,10 +53,10 @@ nav
 .typingeffect
 {
   font-size: var(--typing-font);
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
-nav ul{
+/* nav ul{
   font-size:var(--fontsize-nav) ;
   text-align: center;
   list-style-type: none;
@@ -64,7 +66,7 @@ nav ul{
 nav ul li
 {
   margin:40px;
-}
+} */
 
 a
 {
@@ -85,7 +87,7 @@ h1,h2,h3,h4,p{
 .social
 {
   position: absolute;
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   bottom: 60px;
 }
@@ -120,6 +122,11 @@ h1,h2,h3,h4,p{
   list-style-type:none;
   margin:30px;
 }
+.sidebar
+  {
+    background: rgb(238,103,143);
+    background: linear-gradient(90deg, rgba(238,103,143,1) 50%, rgba(132,124,252,1) 80%);
+  }
 
 @media all and (max-width: 450px) {
   :root {
@@ -127,13 +134,12 @@ h1,h2,h3,h4,p{
     --sidebar-flex:0;
     --typing-font:2rem;
   }
-  .App
+  /* .App
   {
     flex-direction: column;
-  }
+  } */
   .sidebar
   {
-    padding: 30px;
     background: rgb(238,103,143);
     background: linear-gradient(90deg, rgba(238,103,143,1) 50%, rgba(132,124,252,1) 80%);
   }
@@ -141,14 +147,14 @@ h1,h2,h3,h4,p{
   {
     padding: 50px ;
   }
-  nav ul
+  /* nav ul
   {
     display: flex;
   }
   nav ul li
   {
     margin: 10px;
-  }
+  } */
   .social
   {
     left:0;
@@ -156,7 +162,7 @@ h1,h2,h3,h4,p{
     display: flex;
     justify-content: space-around;
     bottom: 30px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
   }
   .social i
   {

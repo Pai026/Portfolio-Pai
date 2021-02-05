@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Navitem from './Navitem';
-
+import logo from '../assets/images/logo.PNG';
 class Navbar extends Component {
     constructor(props)
     {
@@ -18,10 +18,25 @@ class Navbar extends Component {
             document.getElementById(this.state.NavItemActive).classList.add('active');
         });
     };
+
+    toggleMenu=()=> {
+        const navToggle = document.getElementsByClassName("toggle");
+        for(let i=0;i<navToggle.length;i++){
+            navToggle.item(i).classList.toggle("hidden");
+        }
+
+    };
     render() {
         return (
-            <nav>
-            <ul>
+            <nav className="sidebar flex flex-wrap items-center justify-between p-5">
+            <img src={logo} alt="logo" width="60" /> 
+            <div className="flex md:hidden">
+            <button id="hamburger" onClick={this.toggleMenu}>
+            <img className="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" />
+            <img className="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
+            </button>
+            </div> 
+            <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">        
             <Navitem item="Home" tolink="/"  activec={this.activeitem}></Navitem>
             <Navitem item="About" tolink="/about"  activec={this.activeitem}></Navitem>
             <Navitem item="Education" tolink="/education"  activec={this.activeitem}></Navitem>
@@ -29,7 +44,7 @@ class Navbar extends Component {
             <Navitem item="Certificates" tolink="/certificate" activec={this.activeitem}></Navitem>
             <Navitem item="Contact" tolink="/contact"  activec={this.activeitem}></Navitem>
             <Navitem item="Resume" tolink="/resume" activec={this.activeitem}></Navitem>
-            </ul>
+            </div>
             </nav>
             )
         }
