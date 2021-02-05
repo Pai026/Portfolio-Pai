@@ -4,7 +4,7 @@ constructor(props)
 {
 super(props);
 this.state={
-'myskills':['C','C++','PYTHON','JAVA SCRIPT','NESTJS','XAMARIN','JAVA','PHP']
+'myskills':['C','C++','PYTHON','JAVA SCRIPT','NESTJS','XAMARIN','PHP']
 };
 }
 render() {

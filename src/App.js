@@ -14,10 +14,11 @@ import Education from './contents/Education';
 import Skills from './contents/Skill';
 import Contact from './contents/Contact';
 import Resume from './contents/Resume';
+
 function App() {
   return (
     <Router>
-    <div className="App">
+    <div className="App ">
       
     <Navbar />
     <Route exact path="/">
