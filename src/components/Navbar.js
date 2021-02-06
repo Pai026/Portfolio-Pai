@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Navitem from './Navitem';
-import logo from '../assets/images/logo.PNG';
+import logo from '../assets/images/logo.png';
 class Navbar extends Component {
     constructor(props)
     {
