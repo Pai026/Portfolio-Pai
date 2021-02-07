@@ -9,13 +9,18 @@ class Navbar extends Component {
             'NavItemActive':''
         }
     }
+    init=()=>{
+        this.setState({'NavItemActive':'Home'},()=>{
+            document.getElementById('Home').classList.add('bg-black');
+        });
+    }
     activeitem=(x)=>
     {
         if(this.state.NavItemActive.length>0){
-            document.getElementById(this.state.NavItemActive).classList.remove('active');
+            document.getElementById(this.state.NavItemActive).classList.remove('bg-black');
         }
         this.setState({'NavItemActive':x},()=>{
-            document.getElementById(this.state.NavItemActive).classList.add('active');
+            document.getElementById(this.state.NavItemActive).classList.add('bg-black');
         });
     };
 
@@ -27,13 +32,13 @@ class Navbar extends Component {
 
     };
     render() {
-        return (
+        return ( 
             <nav className="sidebar flex flex-wrap items-center justify-between p-5">
-            <img src={logo} alt="logo" width="60" /> 
+            <img  src={logo} alt="logo" width="60" /> 
             <div className="flex md:hidden">
             <button id="hamburger" onClick={this.toggleMenu}>
-            <img className="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" />
-            <img className="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
+            <img alt="" className="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" />
+            <img alt="menu hidden" className="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
             </button>
             </div> 
             <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">        
@@ -44,6 +49,7 @@ class Navbar extends Component {
             <Navitem item="Certificates" tolink="/certificate" activec={this.activeitem}></Navitem>
             <Navitem item="Contact" tolink="/contact"  activec={this.activeitem}></Navitem>
             <Navitem item="Resume" tolink="/resume" activec={this.activeitem}></Navitem>
+            
             </div>
             </nav>
             )
