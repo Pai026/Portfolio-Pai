@@ -45,6 +45,7 @@ class Social extends Component {
                     target="_blank">
                     <i className="fab fa-medium-m"></i>
                 </a>
+                <a className="mr-5 text-gray-800 hover:text-gray-700 cursor-pointer" href="mailto:abhirampai1999@gmail.com"><i className="fa fa-envelope"></i></a>
             </div>
         );
     }

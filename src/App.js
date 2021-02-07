@@ -10,6 +10,7 @@ import Education from "./contents/Education";
 import Skills from "./contents/Skill";
 import Contact from "./contents/Contact";
 import Resume from "./contents/Resume";
+import Footer from "./components/Footer";
 
 function App() {
     return (
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/resume">
                     <Resume pdf={Abhiram} />
                 </Route>
+                <Footer/>
             </div>
         </Router>
     );
