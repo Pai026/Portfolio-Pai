@@ -9,11 +9,6 @@ class Navbar extends Component {
             'NavItemActive':''
         }
     }
-    init=()=>{
-        this.setState({'NavItemActive':'Home'},()=>{
-            document.getElementById('Home').classList.add('bg-black');
-        });
-    }
     activeitem=(x)=>
     {
         if(this.state.NavItemActive.length>0){
@@ -41,17 +36,17 @@ class Navbar extends Component {
             <img alt="menu hidden" className="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
             </button>
             </div> 
-            <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">        
-            <Navitem item="Home" tolink="/"  activec={this.activeitem}></Navitem>
+            <div className="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">        
+            <Navitem item="Home" tolink="/" activec={this.activeitem}></Navitem>
             <Navitem item="About" tolink="/about"  activec={this.activeitem}></Navitem>
             <Navitem item="Education" tolink="/education"  activec={this.activeitem}></Navitem>
             <Navitem item="Skills" tolink="/skills"  activec={this.activeitem}></Navitem>
             <Navitem item="Certificates" tolink="/certificate" activec={this.activeitem}></Navitem>
             <Navitem item="Contact" tolink="/contact"  activec={this.activeitem}></Navitem>
             <Navitem item="Resume" tolink="/resume" activec={this.activeitem}></Navitem>
-            
             </div>
             </nav>
+            
             )
         }
     }
