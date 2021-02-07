@@ -4,7 +4,7 @@ class Navitem extends Component {
     render() {
         return (
             <button
-                className="bg-none hover:bg-none text-gray-800 font-semibold py-2 px-4 border-none"
+                className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-none md:border-none"
                 id={this.props.item}>
                 <Link
                     to={this.props.tolink}
