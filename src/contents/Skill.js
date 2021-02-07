@@ -9,11 +9,11 @@ this.state={
 }
 render() {
 return (
-<div className="condiv skills">
+<div className="prose lg:prose-xl condiv skills">
 <h1 className="subtopic">My Skills</h1>
 <ul>
 {this.state.myskills.map((value)=>{
-return <li>{value}</li>
+return <li key={value}>{value}</li>
 })}
 </ul>
 </div>
