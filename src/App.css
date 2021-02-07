@@ -185,4 +185,8 @@ p {
     .social i {
         padding-right: 0px;
     }
+    .typingeffect {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
 }
