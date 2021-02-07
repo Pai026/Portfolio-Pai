@@ -39,7 +39,7 @@ function App() {
                 <Route path="/resume">
                     <Resume pdf={Abhiram} />
                 </Route>
-                <Footer/>
+                <Footer />
             </div>
         </Router>
     );
