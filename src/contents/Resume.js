@@ -3,11 +3,9 @@ import { Document, Page } from "react-pdf";
 import Loader from "react-loader-spinner";
 export default function Resume(props) {
     const [numPages, setNumPages] = useState(null);
-    const [loading,setLoading] = useState(true);
     const [pageNumber, setPageNumber] = useState(1); //setting 1 to show first page
 
     function onDocumentLoadSuccess({ numPages }) {
-        setLoading(false)
         setNumPages(numPages);
         setPageNumber(1);
     }
@@ -38,7 +36,7 @@ export default function Resume(props) {
                     color="#00BFFF"
                     height={100}
                     width={100}
-                    timeout={loading} //3 secs
+                    timeout={3000} //3 secs
                   />}
                 >
                 <Page
