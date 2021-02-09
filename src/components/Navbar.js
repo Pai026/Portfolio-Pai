@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navitem from "./Navitem";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo.ico";
 class Navbar extends Component {
     constructor(props) {
         super(props);
@@ -30,7 +30,7 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="sidebar flex flex-wrap items-center justify-between p-5">
-                <img src={logo} alt="logo" width="60" />
+                <img src={logo} alt="logo" width="60" height="50"/>
                 <div className="flex md:hidden">
                     <button id="hamburger" onClick={this.toggleMenu}>
                         <img

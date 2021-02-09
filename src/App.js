@@ -1,24 +1,31 @@
-import React from "react";
+import React,{lazy,Suspense} from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Abhiram from "./assets/pdfs/Abhiram.pdf";
-import Certificate from "./assets/pdfs/Certificates.pdf";
-import Navbar from "./components/Navbar";
-import Home from "./contents/Home";
-import About from "./contents/About";
-import Education from "./contents/Education";
-import Skills from "./contents/Skill";
-import Contact from "./contents/Contact";
-import Resume from "./contents/Resume";
-import Footer from "./components/Footer";
+//const AvatarComponent = lazy(() => import('./AvatarComponent'));
+const Abhiram = lazy(() => import("./assets/pdfs/Abhiram.pdf"));
+const Certificate = lazy(() => import("./assets/pdfs/Certificates.pdf"));
+const Navbar = lazy(() => import("./components/Navbar"));
+const Home = lazy(() => import("./contents/Home")) ;
+const About = lazy(() => import("./contents/About")) ;
+const Education = lazy(() => import("./contents/Education"));
+const Skills = lazy(() => import("./contents/Skill")) ;
+const Contact = lazy(() => import("./contents/Contact")) ;
+const Resume = lazy(() => import("./contents/Resume"));
+const Footer = lazy(()=> import ("./components/Footer")) ;
+const renderLoader = () => <p>Loading</p>;
 
 function App() {
     return (
+        <Suspense fallback={renderLoader()}>
         <Router>
             <div className="App ">
+            
                 <Navbar />
+                
                 <Route exact path="/">
+                
                     <Home />
+                    
                 </Route>
                 <Route path="/about">
                     <About />
@@ -42,6 +49,7 @@ function App() {
                 <Footer />
             </div>
         </Router>
+        </Suspense>
     );
 }
 

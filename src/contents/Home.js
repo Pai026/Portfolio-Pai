@@ -9,7 +9,9 @@ class Home extends Component {
                 <img
                     alt="profilePic"
                     src={profilepic}
-                    className="profilepic"></img>
+                    className="profilepic"
+                    width="200px"
+                    height="30px"></img>
                 <ReactTypingEffect
                     className="typingeffect"
                     text={[
