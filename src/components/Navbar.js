@@ -30,7 +30,7 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="sidebar flex flex-wrap items-center justify-between p-5">
-                <img src={logo} alt="logo" width="60" height="50"/>
+                <img src={logo} alt="logo" width="60" height="50" />
                 <div className="flex md:hidden">
                     <button id="hamburger" onClick={this.toggleMenu}>
                         <img
