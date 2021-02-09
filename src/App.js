@@ -2,8 +2,8 @@ import React, { lazy, Suspense } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 //const AvatarComponent = lazy(() => import('./AvatarComponent'));
-const Abhiram = lazy(() => import("./assets/pdfs/Abhiram.pdf"));
-const Certificate = lazy(() => import("./assets/pdfs/Certificates.pdf"));
+import Abhiram from "./assets/pdfs/Abhiram.pdf";
+//import Certificate from "./assets/pdfs/Certificates.pdf";
 const Navbar = lazy(() => import("./components/Navbar"));
 const Home = lazy(() => import("./contents/Home"));
 const About = lazy(() => import("./contents/About"));
@@ -33,9 +33,9 @@ function App() {
                     <Route path="/skills">
                         <Skills />
                     </Route>
-                    <Route path="/certificate">
+                    {/* <Route path="/certificate">
                         <Resume pdf={Certificate} />
-                    </Route>
+                    </Route> */}
                     <Route path="/contact">
                         <Contact />
                     </Route>
