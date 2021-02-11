@@ -31,7 +31,7 @@ export default function Resume(props) {
                 options={{ workerSrc: "/pdf.worker.js" }}
                 onLoadSuccess={onDocumentLoadSuccess}
                 loading={
-                      <i className="text-blue-500 fas fa-circle-notch fa-spin fa-5x"></i>
+                    <i className="text-blue-500 fas fa-circle-notch fa-spin fa-5x"></i>
                 }>
                 <Page
                     className={"PDFPage PDFPageOne"}
