@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf";
-import Loader from "react-loader-spinner";
 export default function Resume(props) {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1); //setting 1 to show first page
@@ -32,13 +31,7 @@ export default function Resume(props) {
                 options={{ workerSrc: "/pdf.worker.js" }}
                 onLoadSuccess={onDocumentLoadSuccess}
                 loading={
-                    <Loader
-                        type="Puff"
-                        color="#00BFFF"
-                        height={100}
-                        width={100}
-                        timeout={10000} //3 secs
-                    />
+                      <i className="text-blue-500 fas fa-circle-notch fa-spin fa-5x"></i>
                 }>
                 <Page
                     className={"PDFPage PDFPageOne"}
