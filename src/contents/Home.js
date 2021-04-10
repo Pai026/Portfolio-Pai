@@ -16,8 +16,7 @@ class Home extends Component {
                     className="typingeffect"
                     text={[
                         "I am Abhiram R Pai",
-                        "I am a Final Year B.Tech Student",
-                        "At Muthoot Institute Of Technology and Science",
+                        "I am a Final Year B.Tech Student.",
                     ]}
                     speed={100}
                     eraseDelay={700}

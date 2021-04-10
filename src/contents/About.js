@@ -11,7 +11,7 @@ class About extends Component {
                 </h3>
                 <br></br>
                 <p>
-                    I am a 4th Year Btech Computer Science Student @ Muthoot
+                    I am a Final Year Btech Computer Science and Engineering Student @ Muthoot
                     Institute Of Technology And Science. I currently live in
                     Ernakulam. I love coding,gaming...
                 </p>
