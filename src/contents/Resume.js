@@ -57,7 +57,13 @@ export default function Resume(props) {
                     onClick={nextPage}>
                     Next
                 </button>
+                
             </div>
+            <div className="inline-flex">
+            <a download="abhiram.pdf" href={pdf} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+                    Download Resume
+                </a>
+                </div>
         </div>
     );
 }
