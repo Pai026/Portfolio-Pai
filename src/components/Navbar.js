@@ -1,12 +1,26 @@
-import React, { Component } from "react";
+import React, { Component} from "react";
 import Navitem from "./Navitem";
 import logo from "../assets/images/logo.ico";
 class Navbar extends Component {
     constructor(props) {
         super(props);
+        
         this.state = {
             NavItemActive: "",
         };
+        
+    }
+    componentDidMount(){
+        let item;
+        if(window.location.pathname.split('/')[1][0])
+        {
+            item =  window.location.pathname.split('/')[1][0].toUpperCase()+window.location.pathname.split('/')[1].substring(1)
+        }
+        else
+        {
+            item = 'Home'
+        }
+        this.activeitem(item)
     }
     activeitem = (x) => {
         if (this.state.NavItemActive.length > 0) {
