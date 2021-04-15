@@ -40,7 +40,7 @@ function App() {
                     <Route path="/skills">
                         <Skills />
                     </Route>
-                    <Route path="/certificate">
+                    <Route path="/certificates">
                         <Resume pdf={Certificate} />
                     </Route>
                     <Route path="/contact">

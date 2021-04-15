@@ -82,7 +82,7 @@ class Navbar extends Component {
                         activec={this.activeitem}></Navitem>
                     <Navitem
                         item="Certificates"
-                        tolink="/certificate"
+                        tolink="/certificates"
                         activec={this.activeitem}></Navitem>
                     <Navitem
                         item="Contact"
