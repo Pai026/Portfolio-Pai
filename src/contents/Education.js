@@ -6,7 +6,7 @@ class Education extends Component {
             <div className="prose lg:prose-xl condiv">
                 <h1 className="subtopic">My Education</h1>
                 <Widecard
-                    title="B.Tech Software Engineering"
+                    title="B.Tech Computer Science and Engineering"
                     where="Muthoot Institute Of Technology and Science"
                     from="July 2017"
                     to="Present"
